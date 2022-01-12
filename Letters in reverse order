@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	char a[200];
+	cout << "Enter a sentence" << endl;
+	cin.getline(a, 200);
+	cout << endl;
+	cout << a << endl;
+
+	int i = 0;
+	while (a[i] != 0)
+		i++;
+	i--;
+	for (; i >= 0; i--)
+		cout << a[i];
+}
