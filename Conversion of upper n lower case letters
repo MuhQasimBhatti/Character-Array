@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	char q[200];
+	
+	cout << "Write a sentence" << endl;
+	cin.getline(q, 200);
+
+	cout << endl<<endl;
+
+	cout << "In capital letters" << endl;
+	int i = 0;
+	while (q[i] != '\0')
+	{
+		if(q[i]>96&&q[i]<123)
+		q[i] -= 32;
+		i++;
+	}
+	cout << q << endl;
+	
+	cout << endl;
+	int f = 0;
+	cout << "In small letters" << endl;
+	while (q[f] != '\0')
+	{
+		if (q[f] <=90&&q[f]>=65)
+			q[f] += 32;
+		f++;
+	}
+	cout << q << endl;
+}
