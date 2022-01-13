@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+		char A[20000];
+		char keyword[20];
+		cout << "Enter the text here" << endl;
+		cin.getline(A, 20000);
+
+		cout << endl << endl;
+		cout << "Enter keywords" << endl;
+		cin.getline(keyword, 200);
+
+		int i = 0;
+		int j = 0;
+		int k = 0;
+
+		while (A[i] != 0)
+			i++;
+		i--;
+
+		while (i >= j)
+		{
+			if (A[j] == keyword[k])
+			{
+				k++;
+
+			}
+			else
+				if (keyword[k] == '\0')
+					break;
+
+			else
+			{
+				k = 0;
+				
+			}
+			
+			j++;
+		}
+
+
+		if (keyword[k] == '\0')
+			cout << "Found" << endl;
+		else
+			cout << "Not found" << endl;
+		cout << "-------------------------------------------------------------------"<<endl;
+	}
+
+
+
