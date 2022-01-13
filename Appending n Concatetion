@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	char A[200];
+	char B[200];
+
+	cout << "Enter string A" << endl;
+	cin.getline(A, 200);
+	cout << "Enter string B" << endl;
+	cin.getline(B, 200);
+
+	int i = 0;
+	while (A[i] != 0)
+		i++;
+	A[i++] = 32;
+	
+	int j = 0;
+	while (B[j] != 0)
+	{
+		A[i] = B[j];
+		i++;
+		j++;
+	}
+	A[i] = 0;
+	cout << A << endl;
+}
